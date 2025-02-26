@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { LuDelete } from "react-icons/lu";
+import { MdDeleteForever } from "react-icons/md";
 // import { fetchAllInventory } from "../utils/Apis";
 
 const Settings = () => {
@@ -48,13 +49,13 @@ const Settings = () => {
               <th className="py-2 font-normal text-left text-[12px] px-4 border-b">Action</th>{/* { 5 } */}
             </tr>
           </thead>
-          <tbody className="gap-4">
+          <tbody className="gap-4 space-y-4 my-2">
             {users.map((user, index) => (
               <tr className="my-1 mb-2" key={index}>
                   <td className="py-2 px-4 text-[12px] bg-white">{user.name}</td>{/* { 2 } */}
                   <td className="py-2 px-4 text-[12px] bg-white">{user.email}</td>{/* { 3 } */}
                   <td className="py-2 px-4 text-[12px] bg-white">{user.role}</td>{/* { 4 } */}
-                  <td className="py-2 px-4 text-[12px] bg-white"><LuDelete color="red" /></td>{/* { 5 } */}
+                  <td className="py-2 px-4 text-[12px] bg-white"> <MdDeleteForever size={16} color="red" /> </td>{/* { 5 } */}
               </tr>
             ))}
           </tbody>
